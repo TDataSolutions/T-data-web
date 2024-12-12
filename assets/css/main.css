@@ -713,15 +713,15 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Home Section
 --------------------------------------------------------------*/
-.hero {
+.home {
   position: relative;
   padding-top: 100px;
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
 }
 
-.hero::before {
+.home::before {
   content: "";
   position: absolute;
   top: 0;
@@ -732,44 +732,44 @@ section,
   pointer-events: none;
 }
 
-.hero .hero-content {
+.home .home-content {
   position: relative;
   z-index: 1;
 }
 
-.hero .hero-content h1 {
+.home .home-content h1 {
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
-.hero .hero-content h1 .accent-text {
+.home .home-content h1 .accent-text {
   color: var(--accent-color);
 }
 
 @media (max-width: 992px) {
-  .hero .hero-content {
+  .hero .home-content {
     text-align: center;
     margin-bottom: 3rem;
   }
 
-  .hero .hero-content h1 {
+  .home .home-content h1 {
     font-size: 2.5rem;
   }
 
-  .hero .hero-content .hero-buttons {
+  .home .home-content .hero-buttons {
     justify-content: center;
   }
 }
 
 @media (max-width: 575px) {
-  .hero .hero-content h1 {
+  .home .home-content h1 {
     font-size: 2rem;
   }
 }
 
-.hero .company-badge {
+.home .company-badge {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -779,11 +779,11 @@ section,
   font-weight: 500;
 }
 
-.hero .company-badge i {
+.home .company-badge i {
   font-size: 1.25rem;
 }
 
-.hero .btn-primary {
+.home .btn-primary {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
@@ -793,39 +793,39 @@ section,
   transition: all 0.3s ease;
 }
 
-.hero .btn-primary:hover {
+.home .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 20%);
   border-color: color-mix(in srgb, var(--accent-color), black 20%);
 }
 
-.hero .btn-link {
+.home .btn-link {
   color: var(--heading-color);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.hero .btn-link:hover {
+.home .btn-link:hover {
   color: var(--accent-color);
 }
 
-.hero .btn-link i {
+.home .btn-link i {
   font-size: 1.5rem;
   vertical-align: middle;
 }
 
-.hero .hero-image {
+.home .home-image {
   position: relative;
   text-align: center;
   z-index: 1;
 }
 
-.hero .hero-image img {
+.home .home-image img {
   max-width: 100%;
   height: auto;
 }
 
-.hero .customers-badge {
+.home .customers-badge {
   position: absolute;
   bottom: 10px;
   right: 30px;
@@ -838,13 +838,13 @@ section,
   will-change: transform;
 }
 
-.hero .customers-badge .customer-avatars {
+.home .customers-badge .customer-avatars {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.hero .customers-badge .avatar {
+.home .customers-badge .avatar {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -852,7 +852,7 @@ section,
   margin-left: -8px;
 }
 
-.hero .customers-badge .avatar:first-child {
+.home .customers-badge .avatar:first-child {
   margin-left: 0;
 }
 
@@ -866,20 +866,20 @@ section,
   font-weight: 600;
 }
 
-.hero .customers-badge p {
+.home .customers-badge p {
   font-size: 0.875rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
 
 @media (max-width: 992px) {
-  .hero .customers-badge {
+  .home .customers-badge {
     position: static;
     margin: 1rem auto;
     max-width: 250px;
   }
 }
 
-.hero .stats-row {
+.home .stats-row {
   position: relative;
   z-index: 1;
   margin-top: 5rem;
@@ -889,14 +889,14 @@ section,
   padding-bottom: 2rem;
 }
 
-.hero .stat-item {
+.home .stat-item {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
 }
 
-.hero .stat-item .stat-icon {
+.home .stat-item .stat-icon {
   flex-shrink: 0;
   width: 64px;
   height: 64px;
@@ -908,37 +908,37 @@ section,
   transition: 0.3s;
 }
 
-.hero .stat-item .stat-icon i {
+.home .stat-item .stat-icon i {
   font-size: 1.5rem;
   color: var(--accent-color);
 }
 
-.hero .stat-item:hover .stat-icon {
+.home .stat-item:hover .stat-icon {
   background-color: var(--accent-color);
 }
 
-.hero .stat-item:hover .stat-icon i {
+.home .stat-item:hover .stat-icon i {
   color: var(--contrast-color);
 }
 
-.hero .stat-item .stat-content {
+.home .stat-item .stat-content {
   flex-grow: 1;
 }
 
-.hero .stat-item .stat-content h4 {
+.home .stat-item .stat-content h4 {
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
-.hero .stat-item .stat-content p {
+.home .stat-item .stat-content p {
   font-size: 0.875rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
 }
 
 @media (max-width: 575px) {
-  .hero .stat-item {
+  .home .stat-item {
     padding: 1.5rem;
   }
 }
@@ -2047,6 +2047,19 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+/* bsnepal Contact */
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.sent-message {
+  color: green;
+  font-weight: bold;
+  display: none;
 }
 
 

@@ -1,23 +1,27 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $package = htmlspecialchars($_POST["package"]);
-    $companyName = htmlspecialchars($_POST["companyName"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $phoneNumber = htmlspecialchars($_POST["phoneNumber"]); 
-    $companyAddress = htmlspecialchars($_POST["companyAddress"]);
-    $message = htmlspecialchars($_POST["message"]);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $packageType = $_POST['package'];
+    $companyName = $_POST['companyName'];
+    $email = $_POST['email'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $companyAddress = $_POST['companyAddress'];
+    $message = $_POST['message'];
 
-    // Example: Prepare email content
-    $emailContent = "Package: $package\n";
-    $emailContent .= "Company Name: $companyName\n";
-    $emailContent .= "Email Address: $email\n";
-    $emailContent .= "Phone Number: $phoneNumber\n"; 
-    $emailContent .= "Company Address: $companyAddress\n";
-    $emailContent .= "Message: $message\n";
+    $conn = new mysqli('localhost', 'root', '', 'website_db');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-    // Send email or save to database
-    mail("info@sahbikram.com.np", "New Client Inquiry", $emailContent);
+    $stmt = $conn->prepare("INSERT INTO package_messages (package_type, company_name, email, phone_number, company_address, message) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssss", $packageType, $companyName, $email, $phoneNumber, $companyAddress, $message);
 
-    echo "Thank you! Your message has been received T Data Solutions.";
+    if ($stmt->execute()) {
+        echo "Message sent successfully to T Data Solutions!";
+    } else {
+        echo "Error 404: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
 }
 ?>

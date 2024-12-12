@@ -31,6 +31,26 @@
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  // Get the success message and form
+  const successMessage = document.getElementById('successMessage');
+  const form = document.getElementById('silverForm'); // Adjust form ID based on your form
+
+  // After form submission, show success message and hide it after 3 seconds
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission (to handle AJAX or direct page refresh)
+
+    // Show success message
+    successMessage.style.display = 'block';
+
+    // Hide the success message after 3 seconds
+    setTimeout(function() {
+      successMessage.style.display = 'none';
+      form.reset(); // Reset the form fields
+    }, 3000); // 3 seconds delay before hiding the success message
+  });
+</script>
+
 
   <!-- BsNepal Owner
   website owner: https://bikramsahsudi.com.np/ -->
@@ -54,7 +74,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#home" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -90,14 +110,14 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+    <!-- Home Section -->
+    <section id="home" class="home section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-center">
           <div class="col-lg-6">
-            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="home-content" data-aos="fade-up" data-aos-delay="200">
               <!-- <div class="company-badge mb-4">
                 <i class="bi bi-gear-fill me-2"></i>
                 Working for your success
@@ -112,8 +132,8 @@
               <p class="mb-4 mb-md-5">
                 <!-- We are dedicated to providing smart and efficient accounting software solutions that simplify financial management and 
                  help businesses of all sizes grow effortlessly.  -->
-                 <img src="assets/img/tally cover.jpg" alt="Hero Image" class="img-fluid">
-                 <img src="assets/img/t data office.jpeg" alt="Hero Image" class="img-fluid">
+                 <img src="assets/img/tally cover.jpg" alt="Home Image" class="img-fluid">
+                 <img src="assets/img/t data office.jpeg" alt="Home Image" class="img-fluid">
                 
 
                  <!-- Whether you  are a small startup or a large enterprise,
@@ -125,7 +145,7 @@
                  -->
               </p>
 
-              <div class="hero-buttons">
+              <div class="home-buttons">
                 <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
                 <a href="https://www.youtube.com/watch?v=ecEwOQ_QIIY" class="btn btn-link mt-2 mt-sm-0 glightbox">
                   <i class="bi bi-play-circle me-1"></i>
@@ -137,11 +157,11 @@
           </div>
 
           <div class="col-lg-6">
-            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-              <!-- <img src="assets/img/TLOGO.jpg" alt="Hero Image" class="img-fluid"> -->
+            <div class="home-image" data-aos="zoom-out" data-aos-delay="300">
+              <!-- <img src="assets/img/TLOGO.jpg" alt="Home Image" class="img-fluid"> -->
               
-              <img src="assets/img/tallyBest.svg" alt="Hero Image" class="img-fluid hero-bg">
-              <img src="assets/img/tally gif22.gif" alt="Hero Image" class="img-fluid hero-bg">
+              <img src="assets/img/tallyBest.svg" alt="Home Image" class="img-fluid home-bg">
+              <img src="assets/img/tally gif22.gif" alt="Home Image" class="img-fluid home-bg">
 
             
                
@@ -210,7 +230,7 @@
 
       </div>
 
-    </section><!-- /Hero Section -->
+    </section><!-- /Home Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
